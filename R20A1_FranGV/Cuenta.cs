@@ -51,9 +51,19 @@ namespace R20A1_FranGV
             }
         }
 
-        // PROCESO
 
-        // SALIDA
+        // METODOS
+
+        public override string ToString()
+        {
+            string cadena = "";
+
+            cadena = $"Titular: {Titular}\n";
+            cadena += $"Cantidad: {Cantidad}\n";
+
+            return cadena;
+        }
+
 
     }
 }
