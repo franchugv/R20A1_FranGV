@@ -58,10 +58,31 @@ namespace R20A1_FranGV
         {
             string cadena = "";
 
-            cadena = $"Titular: {Titular}\n";
-            cadena += $"Cantidad: {Cantidad}\n";
+            if (Cantidad > 0) 
+            { 
 
+                cadena = $"La cuenta del titular Titular: {Titular}\n";
+                cadena += $"Cantidad: {Cantidad}\n";
+            }
+
+            else
+            {
+                cadena = $"La cuenta del Titular {Titular} no tiene saldo.";
+            }
             return cadena;
+        }
+
+
+        // ESPECIALES SEGÚN LA PRACTICA
+
+        public void Ingresar()
+        {
+            if (Cantidad < 0) throw new Exception("La cantidad no puede ser negativa");
+        }
+
+        public void Retirar()
+        {
+            if (Cantidad == 0) throw new Exception("Has sacado todo el dinero");
         }
 
 
